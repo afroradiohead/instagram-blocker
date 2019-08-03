@@ -10769,6 +10769,11 @@ if (currentUrl.host == "www.instagram.com" && currentUrl.searchParams.has("mode"
                     case 2:
                         _a.sent();
                         jquery__WEBPACK_IMPORTED_MODULE_0__(".aOOlW:contains('Block')").trigger("click");
+                        return [4 /*yield*/, sleep_1(200)];
+                    case 3:
+                        _a.sent();
+                        currentUrl.searchParams.delete("mode");
+                        window.location.href = currentUrl.href;
                         return [2 /*return*/];
                 }
             });

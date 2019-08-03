@@ -16,8 +16,8 @@ if(currentUrl.host == "www.instagram.com" && currentUrl.searchParams.has("mode")
 		$(".aOOlW:contains('Block this user')").trigger("click");
 		await sleep(200);
 		$(".aOOlW:contains('Block')").trigger("click");
+		await sleep(200);
+		currentUrl.searchParams.delete("mode");
+		window.location.href = currentUrl.href;
 	});
-
-
-
 }
